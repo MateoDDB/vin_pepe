@@ -1,10 +1,13 @@
-<div class="container">
+<div class="container" style="background: white;">
   <div class="row justify-content-center">
     <div class="col-6">
       <div class="img-home">
         <%= link_to bouteilles_path do %>
           <%= image_tag "photo-pepe.jpg" %>
         <% end %>
+        <div class="title-home">
+          <%= link_to "La cave à vin Pepe",bouteilles_path, class:"btn-lg btn-primary" %>
+        </div>
       </div>
     </div>
     <div class="col-6">
@@ -12,6 +15,9 @@
         <%= link_to recettes_path do %>
           <%= image_tag "photo-mamette.jpg" %>
         <% end %>
+        <div class="title-home">
+          <%= link_to "Recette de Mamette",bouteilles_path, class:"btn-lg btn-primary" %>
+        </div>
       </div>
     </div>
   </div>

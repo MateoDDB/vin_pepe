@@ -1,22 +1,21 @@
-<div class="banner-model"></div>
+<div class="banner-model banner-ingredients"></div>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12">
-      <h1>Recettes</h1>
+      <h1>Les recettes de Mamette</h1>
     </div>
     <div class="col-12">
       <div style="margin-bottom: 40px;">
-        <%= link_to 'Nouvelle Recette', new_recette_path, class:"btn btn-primary" %>
+        <%= link_to 'Ajouter une nouvelle recette', new_recette_path, class:"btn btn-primary" %>
+        <%= link_to "Retour à la page d'accueil", "/", class:"btn btn-primary" %>
       </div>
       <ul class="title-tab-index">
-        <li>Nom</li>
-        <li>Temps</li>
-        <li>Difficulté</li>
+        <li>Nom de la recette</li>
+        <li>Temps de préparation</li>
+        <li>Difficulté de préparation</li>
         <li>Note</li>
-        <li>Description</li>
-        <li>Voir</li>
-        <li>Modifier</li>
-        <li>Supprimer</li>
+        <li>Recette</li>
+        <li>Découvrir</li>
       </ul>
       <% @recettes.each do |recette| %>
         <ul class="title-tab-index">
@@ -26,8 +25,6 @@
           <li><%= recette.note %>/10</li>
           <li><%= recette.description %></li>
           <li><%= link_to 'Voir', recette %></li>
-          <li><%= link_to 'Modifier', edit_recette_path(recette) %></li>
-          <li><%= link_to 'Supprimer', recette, method: :delete, data: { confirm: 'Are you sure?' } %></li>
         </ul>
       <% end %>
     </div>
