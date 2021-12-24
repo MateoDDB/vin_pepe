@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @ingredient.nom %>
+</p>
+
+<p>
+  <strong>Quantite:</strong>
+  <%= @ingredient.quantite %>
+</p>
+
+<p>
+  <strong>Marque:</strong>
+  <%= @ingredient.marque %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @ingredient.note %>
+</p>
+
+<p>
+  <strong>Prix:</strong>
+  <%= @ingredient.prix %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ingredient.description %>
+</p>
+
+<p>
+  <strong>Recette:</strong>
+  <%= @ingredient.recette_id %>
+</p>
+
+<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
+<%= link_to 'Back', recettes_path %>

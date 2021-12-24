@@ -1,0 +1,19 @@
+<div class="col-12">
+  <%= simple_form_for(@recette) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :nom %>
+      <%= f.input :time %>
+      <%= f.input :difficulte %>
+      <%= f.input :note %>
+      <%= f.input :description %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, class:"btn btn-primary" %>
+    </div>
+  <% end %>
+
+</div>

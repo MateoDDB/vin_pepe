@@ -1,0 +1,2 @@
+class Bouteille < ApplicationRecord
+end

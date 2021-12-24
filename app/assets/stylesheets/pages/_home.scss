@@ -1,0 +1,50 @@
+// Specific CSS for your home-page
+.img-home {
+  text-align: center;
+  margin-top: 60px;
+  img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.4s ease;
+    border-radius: 4px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  tr {
+    margin: 20px 0;
+  }
+}
+
+h1 {
+  margin: 40px 0;
+}
+
+.title-tab-index {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  li{
+    flex: 1;
+    list-style: none;
+    background: white;
+    padding: 15px 10px;
+    border-radius: 3px;
+  }
+}
+
+.banner-model {
+  background-image: url("https://images.pexels.com/photos/21393/pexels-photo.jpg?cs=srgb&dl=pexels-math-21393.jpg&fm=jpg");
+  padding: 20vh 0;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.btn-recettes {
+  margin: 40px 0;
+}

@@ -1,0 +1,36 @@
+<div class="banner-model"></div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h1>Recettes</h1>
+    </div>
+    <div class="col-12">
+      <div style="margin-bottom: 40px;">
+        <%= link_to 'Nouvelle Recette', new_recette_path, class:"btn btn-primary" %>
+      </div>
+      <ul class="title-tab-index">
+        <li>Nom</li>
+        <li>Temps</li>
+        <li>Difficulté</li>
+        <li>Note</li>
+        <li>Description</li>
+        <li>Voir</li>
+        <li>Modifier</li>
+        <li>Supprimer</li>
+      </ul>
+      <% @recettes.each do |recette| %>
+        <ul class="title-tab-index">
+          <li><%= recette.nom %></li>
+          <li><%= recette.time %></li>
+          <li><%= recette.difficulte %></li>
+          <li><%= recette.note %>/10</li>
+          <li><%= recette.description %></li>
+          <li><%= link_to 'Voir', recette %></li>
+          <li><%= link_to 'Modifier', edit_recette_path(recette) %></li>
+          <li><%= link_to 'Supprimer', recette, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
