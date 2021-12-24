@@ -1,5 +1,5 @@
 {
-  "name": "vin_pepe",
+  "name": "my-webpack-project",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -11,9 +11,21 @@
     "turbolinks": "^5.2.0",
     "webpack": "^5.65.0"
   },
-  "version": "0.1.0",
+  "version": "1.0.0",
   "devDependencies": {
+    "@webpack-cli/generators": "^2.4.1",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.5.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.1"
+    "webpack-dev-server": "^4.7.1",
+    "workbox-webpack-plugin": "^6.4.2"
+  },
+  "description": "My webpack project",
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   }
 }
