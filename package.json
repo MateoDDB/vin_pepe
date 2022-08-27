@@ -9,6 +9,7 @@
     "@webpack-cli/serve": "^1.6.0",
     "bootstrap": "4.6",
     "jquery": "^3.6.0",
+    "node-sass": "^7.0.1",
     "path": "^0.12.7",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0",
