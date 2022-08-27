@@ -1,0 +1,82 @@
+// Specific CSS for your home-page
+.img-home {
+  text-align: center;
+  position: relative;
+  img {
+    width:100%;
+    height: 90vh;
+    object-fit: cover;
+    transition: 0.4s ease;
+    border-radius: 4px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+body {
+  background: white;
+}
+
+table {
+  width: 100%;
+  tr {
+    margin: 20px 0;
+  }
+}
+
+h1 {
+  margin: 40px 0;
+}
+
+.title-home {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
+
+.title-tab-index {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  li{
+    word-wrap: break-word;
+    flex: 1;
+    list-style: none;
+    background: #F4F4F6;
+    padding: 15px 10px;
+    border-radius: 3px;
+  }
+}
+
+.banner-model {
+  padding: 20vh 0;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.banner-vin {
+  background-image: url("https://images.pexels.com/photos/21393/pexels-photo.jpg?cs=srgb&dl=pexels-math-21393.jpg&fm=jpg");
+}
+
+.banner-ingredients {
+  background-image: url("https://cdn.pixabay.com/photo/2015/10/26/07/21/vegetables-1006694_1280.jpg");
+}
+
+.btn-recette {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-recettes {
+  margin: 40px 0;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}

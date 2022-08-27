@@ -1,0 +1,33 @@
+<div class="banner-model banner-vin"></div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h1>Liste des bouteilles</h1>
+    </div>
+    <div class="col-12">
+      <div style="margin-bottom: 40px;">
+        <%= link_to 'Ajouter une bouteille', new_bouteille_path, class:"btn btn-primary" %>
+        <%= link_to "Retour à la page d'accueil", "/", class:"btn btn-primary" %>
+      </div>
+      <ul class="title-tab-index">
+        <li>Nom</li>
+        <li>Années</li>
+        <li>Description</li>
+        <li>Note</li>
+        <li>En stock</li>
+        <li>Voir</li>
+      </ul>
+      <% @bouteilles.each do |bouteille| %>
+        <ul class="title-tab-index">
+            <li><%= bouteille.name %></li>
+            <li><%= bouteille.year %></li>
+            <li><%= bouteille.description %></li>
+            <li><%= bouteille.note %></li>
+            <li><%= bouteille.quantity %></li>
+            <li><%= link_to 'Voir', bouteille %></li>
+            </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

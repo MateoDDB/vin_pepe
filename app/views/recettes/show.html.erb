@@ -1,0 +1,59 @@
+<div class="banner-model banner-ingredients"></div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="btn-recette">
+        <%= link_to 'Modifier la recette', edit_recette_path(@recette), class:"btn btn-primary" %>
+        <%= link_to 'Retour à la liste des recettes', recettes_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+  <p>
+    <strong>Nom :</strong>
+    <%= @recette.nom %>
+  </p>
+  <p>
+    <strong>Temps de préparation et cuisson :</strong>
+    <%= @recette.time %>
+  </p>
+  <p>
+    <strong>Difficulte :</strong>
+    <%= @recette.difficulte %>
+  </p>
+  <p>
+    <strong>Note :</strong>
+    <%= @recette.note %>
+  </p>
+  <div class="btn-recettes">
+    <p>
+      <strong>Liste des ingrédients</strong>
+    </p>
+    <%= link_to "Ajouter un ingrédient", new_recette_ingredient_path(@recette), class:"btn btn-primary" %>
+  </div>
+  <ul class="title-tab-index">
+    <li>Nom de l'ingrédient</li>
+    <li>Quantité</li>
+    <li>Marque</li>
+    <li>Note</li>
+    <li>Prix</li>
+    <li>Commentaire</li>
+    <li>Modifier</li>
+  </ul>
+  <% @recette.ingredients.each do |ingredient| %>
+    <ul class="title-tab-index">
+        <li><%= ingredient.nom %></li>
+        <li><%= ingredient.quantite %></li>
+        <li><%= ingredient.marque %></li>
+        <li><%= ingredient.note %></li>
+        <li><%= ingredient.prix %></li>
+        <li><%= ingredient.description %></li>
+        <li> <%= link_to "modifier",edit_ingredient_path %> </li>
+    </ul>
+  <% end %>
+  <p style="margin-top: 40px;">
+    <strong>Recette :</strong>
+    <br>
+    <br>
+    <%= @recette.description %>
+  </p>
+</div>

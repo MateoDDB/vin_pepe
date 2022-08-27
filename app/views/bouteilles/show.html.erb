@@ -1,0 +1,33 @@
+<div class="banner-model"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <strong>Nom :</strong>
+        <%= @bouteille.name %>
+      </p>
+      <p>
+        <strong>Année :</strong>
+        <%= @bouteille.year %>
+      </p>
+      <p>
+        <strong>Description :</strong>
+        <%= @bouteille.description %>
+      </p>
+      <p>
+        <strong>Note :</strong>
+        <%= @bouteille.note %>
+      </p>
+      <p>
+        <strong>En stock :</strong>
+        <%= @bouteille.quantity %>
+      </p>
+      <div>
+        <%= link_to 'Modifier', edit_bouteille_path(@bouteille), class:"btn btn-primary" %>
+      </div>
+      <div>
+        <%= link_to 'Retour sur la liste des vins', bouteilles_path, class:"btn btn-primary" %></div>
+    </div>
+  </div>
+</div>

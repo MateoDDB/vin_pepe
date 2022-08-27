@@ -1,0 +1,33 @@
+<div class="banner-model banner-ingredients"></div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h1>Les recettes de Mamette</h1>
+    </div>
+    <div class="col-12">
+      <div style="margin-bottom: 40px;">
+        <%= link_to 'Ajouter une nouvelle recette', new_recette_path, class:"btn btn-primary" %>
+        <%= link_to "Retour à la page d'accueil", "/", class:"btn btn-primary" %>
+      </div>
+      <ul class="title-tab-index">
+        <li>Nom de la recette</li>
+        <li>Temps de préparation</li>
+        <li>Difficulté de préparation</li>
+        <li>Note</li>
+        <li>Recette</li>
+        <li>Découvrir</li>
+      </ul>
+      <% @recettes.each do |recette| %>
+        <ul class="title-tab-index">
+          <li><%= recette.nom %></li>
+          <li><%= recette.time %></li>
+          <li><%= recette.difficulte %></li>
+          <li><%= recette.note %>/10</li>
+          <li><%= recette.description %></li>
+          <li><%= link_to 'Voir', recette %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
